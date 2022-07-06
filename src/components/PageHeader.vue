@@ -1,7 +1,7 @@
 <template>
     <header>
         <h1>{{ title }}
-        <i class="fas fa-bars menu"></i>
+        <i @click="$emit('toggle-menu')"  class="fas fa-thin fa-gear menu"></i>
         </h1>
     </header>
 </template>
@@ -29,10 +29,11 @@ export default{
     padding: 7px;
     border-radius: 20%;
     border: 1px solid #142559;
+    transition: ease-out .15s;
+    box-shadow: inset 0 0 0 0 #0439D9;
 }
 .menu:hover{
-    
-    border-color: #325CD9;
-    border-width: 4px;
+    border-width: 2px;
+ 
 }
 </style>

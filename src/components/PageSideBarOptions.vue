@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3> {{ option }} </h3>
+        <h3 @click="emit$('toggle-show', id)"> {{ option }} </h3>
     </div>
 </template>
 
@@ -10,6 +10,7 @@ export default{
     name: 'SideBarOption',
     props: {
         option: String,
+        id: Number,
     }
 }
 </script>

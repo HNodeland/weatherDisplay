@@ -1,8 +1,8 @@
 <template>
     <div class = "sidebar">
-        <SideBarOption class = "sideBarOption" option = "test"/>
-        <SideBarOption class = "sideBarOption" option = "test2"/>
-        <SideBarOption class = "sideBarOption" option = "test3"/>        
+        <SideBarOption @click="$emit('toggle-widget')" class = "sideBarOption" option = "Legg til"/>
+        <SideBarOption @click="$emit('toggle-setup')" class = "sideBarOption" option = "Oppsett"/>
+        <SideBarOption @click="$emit('toggle-settings')" class = "sideBarOption" option = "Instillinger"/>        
     </div>
 </template>
 
