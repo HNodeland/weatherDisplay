@@ -29,6 +29,7 @@ Jeg skal lage dette for faren min, som har en nettside som gjør nettopp dette, 
 - Legg til en lagre-knapp som lagrer widgetene man har valgt i en array
 - Legg til en meny i menyen hvor man kan scrolle gjennom widgets. Denne listen skal kunne søkes i, og den skal vise bilder
 - Når noe er valgt, skal det lyste grønt, og en lagre knapp skal dukke opp/endre farge/bli aktiv
+- Når man holder over et bilde av en måler, skal bilde bli større
 
 ##### Oppsett-menyen
 - Kunne legge til linken som siden skal hente data fra(?)

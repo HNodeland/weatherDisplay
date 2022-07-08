@@ -4,7 +4,23 @@
       title="Weather display"
       @toggle-menu="toggleMenu"
     />
+    <div class = "widgets">
+      <div 
+        :key = "widget.id"
+        v-for="widget in widgets"
+      >
+      <h1 v-if="widget.active">{{widget.name}}</h1>
+      </div>
+    </div>
+
+    <div class = "settingsWindow" v-if="showWidget">
+      <AddWidget 
+        @widget-toggle="selectedWidgets" 
+        :widgets="widgets" 
+      />
+    </div>
   </div>
+  <ChartWidget  />
 
   <div class = "sidebar" v-if="showSideBar">
     <SideBar  
@@ -13,9 +29,6 @@
     @toggle-settings="toggleSettings"
     />
   </div>
-  <div class = "settingsWindow" v-if="showWidget">
-    <AddWidget />
-  </div>
 
 </template>
 
@@ -23,6 +36,8 @@
 import PageHeader from './components/PageHeader.vue'
 import SideBar from './components/PageSideBar.vue'
 import AddWidget from './components/AddWidget.vue'
+import ChartWidget from './components/ChartWidget.vue'
+
 
 export default {
   name: 'App',
@@ -30,9 +45,9 @@ export default {
     PageHeader,
     SideBar,
     AddWidget,
+    ChartWidget,
+},
 
-
-  },
   data() {
     return{
       PageSideBarOptions: [],
@@ -44,8 +59,21 @@ export default {
       showSettings: false,
 
       weatherData: [],
-
+      widgets: [],
     }
+  },
+  methods:{
+    toggleMenu(){
+      this.showSideBar = !this.showSideBar
+      this.showWidget = false
+    },
+    toggleWidget(){
+      this.showWidget = !this.showWidget
+    },
+    selectedWidgets(id){
+      
+      this.widgets[id].active = !this.widgets[id].active
+    },
   },
 
   created() {
@@ -66,17 +94,24 @@ export default {
         time: '15:00',
         temperature: 21,
       }
-      
+    ]
+    this.widgets =[
+      {
+        id: '0',
+        name: 'Temperaturmåler',
+        desc: 'Dette er en temperaturmåler',
+        img: 'Bilde',
+        active: false,
+      },
+      {
+        id: '1',
+        name: 'Fuktighetsmåler',
+        desc: 'Dette er en fukighetsmåler',
+        img: 'Bilde',
+        active: false,
+      },
     ]
   },
-  methods:{
-    toggleMenu(){
-      this.showSideBar = !this.showSideBar
-    },
-    toggleWidget(){
-      this.showWidget = !this.showWidget
-    }
-  }
 
 }
 
@@ -107,12 +142,12 @@ body {
 
 .settingsWindow {
   width: 76%;
-  height: 400px;
+  height: 70%;
   position: fixed;
   border: 1px solid #132559;
   border-radius: 5px;
   top: 170px;
-  margin-left: 270px;
+  margin-left: 195px;
 
 }
 </style>
