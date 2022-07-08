@@ -1,5 +1,5 @@
 # Weather Display
-Dette er et prosjekt jeg skal jobbe med over sommeren hvor målet er å lage en dynamisk nettside som tar i bruk en rekke tall (værdata) som oppdateres annenhvert sekund, og lage grafikker ut av de ved hjelp av frameworket vue. Eksempel på [data](http://nodeland.no/wdl/clientraw.txt)
+Dette er et prosjekt jeg skal jobbe med over sommeren hvor målet er å lage en dynamisk nettside som tar i bruk en rekke tall (værdata) som oppdateres annenhvert sekund, og lage grafikker ut av de ved hjelp av frameworket vue. Eksempel på [data.](http://nodeland.no/wdl/clientraw.txt)
 
 
 Jeg skal lage dette for faren min, som har en nettside som gjør nettopp dette, men [denne nettsiden](https://www.meteo.no/hjem/vaeret) er fra 2004 tror jeg, og det er et behov for noen oppdateringer.
