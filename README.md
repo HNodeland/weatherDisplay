@@ -5,11 +5,11 @@ Dette er et prosjekt jeg skal jobbe med over sommeren hvor målet er å lage en 
 Jeg skal lage dette for faren min, som har en nettside som gjør nettopp dette, men [denne nettsiden](https://www.meteo.no/hjem/vaeret) er fra 2004 tror jeg, og det er et behov for noen oppdateringer.
 
 ###### Farger brukt på nettsiden
-- Grå: #363540
-- Navy: #0439D9
-- Blå-grå: #2142A6
-- Mørkeblå: #142559
-- Lyseblå: #325CD9
+- ##### Grå: #363540
+- ##### Navy: #0439D9
+- ##### Blå-grå: #2142A6
+- ##### Mørkeblå: #142559
+- ##### Lyseblå: #325CD9
 
 
 ## Todo list
